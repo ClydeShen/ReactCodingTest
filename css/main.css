@@ -1,0 +1,445 @@
+/* General CSS */
+
+:root {
+    --theme: #2842d5;
+    --main-bg: #f0f0f0;
+    --text-color: #2b2e34
+}
+
+html {
+    font-family: sans-serif;
+    height: 100%;
+    color: var(--text-color);
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    height: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: 3em;
+    letter-spacing: 5px;
+}
+
+.line {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.sm-text {
+    font-size: 0.7em
+}
+
+.smler-text {
+    font-size: 0.65em
+}
+
+.text-thin {
+    font-weight: 100;
+}
+
+.text-bold {
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+
+.h-100 {
+    height: 100%;
+}
+
+.margin-auto {
+    margin: auto auto
+}
+
+.margin-top10 {
+    margin-top: 10px;
+}
+
+.padding-15 {
+    padding: 15px;
+}
+
+.padding-top15 {
+    padding-top: 15px;
+}
+
+.pull-left {
+    float: left;
+}
+
+.pull-right {
+    float: right;
+}
+
+.auto-10,
+.auto-20,
+.auto-30,
+.auto-40,
+.auto-50,
+.auto-60,
+.auto-70,
+.auto-80,
+.auto-90,
+.auto {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+}
+
+.auto-10 {
+    -ms-flex: 0 0 10%;
+    flex: 0 0 10%;
+    max-width: 10%;
+}
+
+.auto-20 {
+    -ms-flex: 0 0 20%;
+    flex: 0 0 20%;
+    max-width: 20%;
+}
+
+.auto-30 {
+    -ms-flex: 0 0 30%;
+    flex: 0 0 30%;
+    max-width: 30%;
+}
+
+.auto-33 {
+    -ms-flex: 0 0 33.333333%;
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+}
+
+.auto-40 {
+    width: 40%;
+}
+
+.auto-50 {
+    width: 50%;
+}
+
+.auto-60 {
+    width: 60%;
+}
+
+.auto-70 {
+    -ms-flex: 0 0 70%;
+    flex: 0 0 70%;
+    max-width: 70%;
+}
+
+.auto-80 {
+    width: 80%;
+}
+
+.auto-90 {
+    width: 90%;
+}
+
+.border {
+    box-shadow: 0 0 0 1px black
+}
+
+.around {
+    border-radius: 100%;
+    display: table;
+}
+
+.around>span {
+    border-radius: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.bg-white {
+    background-color: #fff;
+}
+
+.bg-theme {
+    background-color: var(--theme);
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+    box-sizing: border-box;
+    padding: 0;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    -moz-apperance: none;
+    border-radius: 0px;
+    height: 13px;
+}
+
+input[type=range]:focus {
+    outline: none;
+}
+
+input[type='range']::-webkit-slider-thumb {
+    -webkit-appearance: none !important;
+    background-color: white;
+    border-radius: 50px;
+    height: 20px;
+    width: 20px;
+}
+
+input[type='checkbox'].switch {
+    display: none
+}
+
+input[type='checkbox'].switch+label {
+    content: " ";
+    background: var(--theme);
+    width: 40px;
+    height: 18px;
+    position: absolute;
+    border-radius: 50px;
+    margin-left: -20px;
+}
+
+input[type='checkbox'].switch+label::after {
+    content: " ";
+    height: 10px;
+    position: absolute;
+    border-radius: 50px;
+    background: white;
+    width: 10px;
+    margin-left: -16px;
+    margin-top: 4px;
+}
+
+input[type='checkbox'].switch:checked+label::after {
+    margin-left: 6px;
+}
+
+
+/* Components css */
+
+
+/* App */
+
+.app {
+    padding: 0px 30px;
+}
+
+#app {
+    height: 100%;
+    width: 1280px;
+    background-color: var(--main-bg);
+}
+
+.left {
+    padding: 240px 30px
+}
+
+.right {
+    padding: 0px 30px
+}
+
+.top-space {
+    height: 325px;
+}
+
+.note {
+    margin: 60px 45px 0px 0px;
+}
+
+.radio-container,
+.switch-container {
+    /* padding: 0px 60px; */
+}
+
+.switch-container {
+    padding-top: 30px;
+}
+
+
+/* RadioButton */
+
+.radio-button {
+    /* padding: 0px 60px; */
+}
+
+.radio {
+    line-height: 22px;
+}
+
+.radio input {
+    display: none;
+}
+
+.radio>label {
+    text-align: center
+}
+
+.radio>label>span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.radio input:checked+label i {
+    background: var(--theme);
+}
+
+.radio input:checked+label i::after {
+    content: " ";
+    background: white;
+    width: 9px;
+    height: 9px;
+    position: absolute;
+    border-radius: 100%;
+    margin-left: -5px;
+    margin-top: 6px;
+}
+
+.radio label i {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    background: #D8d8da;
+    border-radius: 100%;
+    margin-right: 5px;
+}
+
+
+/* PriceTag */
+
+.price-tag {
+    width: 200px;
+}
+
+.box {
+    box-shadow: 1px 1px 6px -1px #0000001f;
+    width: 180px;
+    height: 180px;
+    background-color: white;
+    padding: 30px 30px 0px 30px;
+}
+
+.box .title {}
+
+.box strike {
+    display: table;
+    margin-top: 10px;
+}
+
+.box strike::before {
+    font-size: 0.5em;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.box strike.dollar::before {
+    content: "$";
+}
+
+.box strike.eur::before {
+    content: "€";
+}
+
+.box .current-price {
+    font-size: 2em;
+    display: table;
+    line-height: 35px;
+    text-align: left;
+}
+
+.box .current-price::before {
+    font-size: 0.5em;
+    display: table-cell;
+    vertical-align: top;
+    padding: 0px 0px 0px 15px;
+    line-height: 25px;
+}
+
+.box .current-price.dollar::before {
+    content: "$";
+}
+
+.box .current-price.eur::before {
+    content: "€";
+}
+
+.box .current-price::after {
+    content: "*";
+    font-size: 0.5em;
+    display: table-cell;
+    vertical-align: top;
+    line-height: 25px;
+}
+
+.choose {
+    border-radius: 100%;
+    background-color: var(--theme);
+    height: 100px;
+    width: 100px;
+    color: white;
+    display: table;
+    margin-top: -23px;
+    font-size: 0.8em;
+}
+
+.choose>span {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.free {
+    font-size: 3em;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+
+/* SwitchButton */
+
+
+/* Slider */
+
+.slider {
+    padding: 15px 40px;
+}
+
+.imageCount {
+    height: 90px;
+    width: 90px;
+    margin-bottom: -20px;
+}
+
+.imageCount>span::after {
+    content: " ";
+    background-color: white;
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    margin: 30px 0px 0px -33px;
+    transform: rotate(45deg);
+}
+
+.range-labels {
+    margin-top: 15px;
+}
