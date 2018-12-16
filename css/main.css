@@ -268,21 +268,12 @@ input[type='checkbox'].switch:checked+label::after {
     margin: 60px 45px 0px 0px;
 }
 
-.radio-container,
-.switch-container {
-    /* padding: 0px 60px; */
-}
-
 .switch-container {
     padding-top: 30px;
 }
 
 
 /* RadioButton */
-
-.radio-button {
-    /* padding: 0px 60px; */
-}
 
 .radio {
     line-height: 22px;
@@ -339,8 +330,6 @@ input[type='checkbox'].switch:checked+label::after {
     background-color: white;
     padding: 30px 30px 0px 30px;
 }
-
-.box .title {}
 
 .box strike {
     display: table;
